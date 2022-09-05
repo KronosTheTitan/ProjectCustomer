@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
@@ -10,13 +8,13 @@ public class CameraController : MonoBehaviour
     public float smoothTime = .1f;
     public float rotSmoothSpeed = 3;
 
-    Vector3 smoothV;
+    Vector3 _smoothV;
 
     
     void LateUpdate()
     {
         Vector3 targetPos = target.position + target.forward * followOffset.z + target.up * followOffset.y + target.right * followOffset.x;
-        transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref smoothV, smoothTime);
+        transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref _smoothV, smoothTime);
 
         Quaternion rot = transform.rotation;
         transform.LookAt(target.position + target.forward * lookAheadDst);
