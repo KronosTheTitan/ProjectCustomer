@@ -7,9 +7,9 @@ using UnityEngine;
 public class Trash : MonoBehaviour
 {
     [SerializeField] private int yield = 1;
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject != GameManager.Instance.Player) return;
+        if (other.gameObject != GameManager.Instance.Player) return;
         GameManager.Instance.CollectTrash(yield);
         Destroy(gameObject);
     }
