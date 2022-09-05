@@ -66,7 +66,6 @@ public class Submarine : MonoBehaviour
         _rigidbody.velocity = targetVelocity;
 
         //VISUAL EFFECTS
-        //todo replace these with whatever the artists want to use.
         rudderYaw.localEulerAngles = Vector3.up * yawVelocity / maxTurnSpeed * rudderAngle;
         rudderPitch.localEulerAngles = Vector3.left * pitchVelocity / maxPitchSpeed * rudderAngle;
 
@@ -75,7 +74,5 @@ public class Submarine : MonoBehaviour
         
         //Debug.Log(accelDir);
         //Debug.Log(velocity);
-        Debug.Log(targetYawVelocity);
-        Debug.Log(targetPitchVelocity);
     }
 }
