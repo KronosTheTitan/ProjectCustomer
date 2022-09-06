@@ -106,7 +106,17 @@ public class Submarine : MonoBehaviour
     /// </summary>
     [SerializeField] private Rigidbody _rigidbody;
 
+    public float speedPercent { get; private set; }
+    
     void Update () {
+
+        if (GameManager.Instance.currentFuel <= 0)
+        {
+            currentSpeed = 0;
+            acceleration = 0;
+            _rigidbody.velocity = new Vector3(0, 0, 0);
+            return;
+        }
         
         //acceleration
         float accelDir = 0;
@@ -127,7 +137,7 @@ public class Submarine : MonoBehaviour
         currentSpeed = Mathf.Clamp (currentSpeed, minSpeed, maxSpeed);
         
         //calculate percentage of max speed reached.
-        float speedPercent = currentSpeed / maxSpeed;
+        speedPercent = currentSpeed / maxSpeed;
 
         //set the target velocity (velocity to be reached over time)
         // equal to the forward direction multiplied by the current speed.
@@ -151,8 +161,17 @@ public class Submarine : MonoBehaviour
         //and time multiplied by smoothing. this creates a more smoothed out change in velocity.
         yawVelocity = Mathf.Lerp (yawVelocity, targetYawVelocity, Time.deltaTime * smoothTurnSpeed);
         
+        //create the new rotation based on the speed, time and target rotations
+        Vector3 newRot = (Vector3.up * yawVelocity + Vector3.left * pitchVelocity) * Time.deltaTime * speedPercent;
+        
+        //add the current rotation to the new rotation
+        newRot += transform.localEulerAngles;
+        
+        //lock the torque to ensure that it doesn't freak out in some collisions
+        newRot.z = 0;
+        
         //apply the calculated velocity changes to the submarines rotation.
-        transform.localEulerAngles += (Vector3.up * yawVelocity + Vector3.left * pitchVelocity) * Time.deltaTime * speedPercent;
+        transform.eulerAngles = newRot;
         
         //apply the movement velocity, rigidbody will handle the forward movement and collision.
         _rigidbody.velocity = targetVelocity;

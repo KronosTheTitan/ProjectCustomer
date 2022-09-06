@@ -16,7 +16,7 @@ public class Trash : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //check if the other gameObject is the player, if its not exit the method
-        if (other.gameObject != GameManager.Instance.Player) return;
+        if (other.gameObject != GameManager.Instance.Player || GameManager.Instance.TrashCapacity < GameManager.Instance.CollectedTrash + yield) return;
         
         //call the method to add the amount trash set in the yield variable to the GameManagers
         //collectedTrash variable

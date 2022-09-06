@@ -40,7 +40,7 @@ public class CameraController : MonoBehaviour
         //select the targetPosition based on the 
         Vector3 targetPos = target.position + target.forward * followOffset.z + target.up * followOffset.y + target.right * followOffset.x;
         
-        //set the position to a smooth interpolated spot between its current position, target position based on its smoothing values.
+        //set the position to a smooth interpolated spot between its current position, target position based on its smoothing values. 
         transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref _smoothV, smoothTime);
 
         //grab the rotation from the transform component of the camera
