@@ -7,6 +7,7 @@ Shader "Projector/Caustics" {
 		_CausticTex1 ("Cookie", 2D) = "" {}
 		_CausticTex2 ("Cookie", 2D) = "" {}
 		_FalloffTex ("FallOff", 2D) = "" {}
+		_timeScale ("Time Scale", float) = 1
 	}
 	
 	Subshader {
@@ -42,6 +43,8 @@ Shader "Projector/Caustics" {
 				UNITY_TRANSFER_FOG(o,o.pos);
 				return o;
 			}
+
+			float _timeScale;
 			
 			fixed4 _Color;
 			sampler2D _CausticTex1;
@@ -50,21 +53,20 @@ Shader "Projector/Caustics" {
 			
 			fixed4 frag (v2f i) : SV_Target
 			{
-				float2 uv1 = i.uvShadow;
-				//float4 uv2 = float4(i.uvShadow.x,(i.uvShadow.y+_Time),i.uvShadow.zw);
-				fixed4 texS1 = tex2Dproj (_CausticTex1, UNITY_PROJ_COORD(i.uvShadow));
-				fixed4 texS2 = tex2Dproj (_CausticTex1, UNITY_PROJ_COORD(i.uvShadow));
-
-				//return texS1;
-
-				return i.uvShadow.zzzx;
-				
-				//return i.uvShadow;
+				float time = _Time.y * _timeScale;
+				float4 uv1 = float4((i.uvShadow.x+time),i.uvShadow.y,i.uvShadow.z,i.uvShadow.w);
+				float4 uv2 = float4(i.uvShadow.x,(i.uvShadow.y+time),i.uvShadow.z,i.uvShadow.w);
+				fixed4 texS1 = tex2Dproj (_CausticTex1, UNITY_PROJ_COORD(uv1));
+				fixed4 texS2 = tex2Dproj (_CausticTex1, UNITY_PROJ_COORD(uv2));
 
 				fixed4 texS = clamp(texS1+texS2,0,1);
+
+				texS = lerp((0,0,0,0),texS,step(0,i.uvShadow.w));
 				
 				texS.rgb *= _Color.rgb;
 				texS.a = 1.0-texS.a;
+
+				//return i.uvShadow.w;
 	
 				fixed4 texF = tex2Dproj (_FalloffTex, UNITY_PROJ_COORD(i.uvFalloff));
 				fixed4 res = texS * texF.a;
