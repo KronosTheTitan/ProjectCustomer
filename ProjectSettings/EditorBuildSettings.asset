@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SubmarineTest.unity
+    guid: f28bdce9058adee42949bc77f0896892
   m_configObjects: {}
