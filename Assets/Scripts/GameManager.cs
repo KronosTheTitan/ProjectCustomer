@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
@@ -45,7 +46,11 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public int CollectedTrash { get; private set; }
 
+    /// <summary>
+    /// the maximum amount of trash the player can pick up before having to return to base.
+    /// </summary>
     public int TrashCapacity { get; private set; } = 3;
+    [FormerlySerializedAs("TrashCapacityEnabled")] public bool trashCapacityEnabled;
 
     /// <summary>
     /// Used to modify the amount of trash collected.
@@ -57,8 +62,20 @@ public class GameManager : MonoBehaviour
         CollectedTrash += amount;
     }
 
+    /// <summary>
+    /// the maximum fuel capacity
+    /// </summary>
     public float maxFuel = 100;
+    
+    /// <summary>
+    /// the current amount of fuel.
+    /// </summary>
     public float currentFuel = 100;
+    
+    /// <summary>
+    /// how much fuel is used.
+    /// math = ( the percentage of the actual speed / 10 ) * this variable.
+    /// </summary>
     public float fuelConsumptionFac = 2;
 
     /// <summary>
@@ -68,8 +85,12 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void FuelUsage()
     {
+        //set the speed percentage to account for reverse.
+        //just an if statement that checks if the speed percentage is below 0 and flips it to above 0 if true.
         float actualSpeedPercent = Submarine.speedPercent >= 0 ? Submarine.speedPercent : Submarine.speedPercent * -1;
-        currentFuel -= actualSpeedPercent * 2;
+        
+        //decrease the amount of fuel the player has
+        currentFuel -= actualSpeedPercent * fuelConsumptionFac;
     }
 
     private float _lastFuelTick = 0;
