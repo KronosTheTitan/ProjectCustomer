@@ -1048,6 +1048,7 @@ MonoBehaviour:
   Player: {fileID: 60574428}
   Submarine: {fileID: 60574430}
   TrashPrefab: {fileID: 4365751627328465497, guid: 3de14b81e3171e243bea94a209d31afe, type: 3}
+  trashCapacityEnabled: 0
   maxFuel: 100
   currentFuel: 100
   fuelConsumptionFac: 2
@@ -1271,6 +1272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
