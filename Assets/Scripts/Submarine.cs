@@ -106,6 +106,11 @@ public class Submarine : MonoBehaviour
     /// </summary>
     [SerializeField] private Rigidbody _rigidbody;
 
+    /// <summary>
+    /// the menu that opens up when the player loses the game
+    /// </summary>
+    [SerializeField] private GameObject deathMenu;
+    
     public float speedPercent { get; private set; }
     
     void Update () {
@@ -115,6 +120,7 @@ public class Submarine : MonoBehaviour
             currentSpeed = 0;
             acceleration = 0;
             _rigidbody.velocity = new Vector3(0, 0, 0);
+            deathMenu.SetActive(true);
             return;
         }
         
