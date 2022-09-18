@@ -31,7 +31,7 @@ namespace UI
 
         public void StartGame()
         {
-            SceneManager.LoadScene(level.buildIndex+1);
+            SceneManager.LoadScene("SubmarineTest");
         }
 
         public void OpenSettingsMenu()
@@ -63,5 +63,7 @@ namespace UI
             mainMenu.SetActive(true);
             settingsMenu.SetActive(false);
         }
+        
+        
     }
 }

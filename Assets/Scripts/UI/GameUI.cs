@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,7 +16,7 @@ namespace UI
         /// slider used to keep track of fuel.
         /// </summary>
         [SerializeField] private Slider fuel;
-
+        
         /// <summary>
         /// this function is ran when the scene is loaded
         /// </summary>
@@ -41,6 +42,7 @@ namespace UI
             
             //set the maximum fuel capacity based on the current maximum fuel capacity.
             fuel.maxValue = GameManager.Instance.maxFuel;
+
         }
 
 
@@ -55,5 +57,7 @@ namespace UI
             //The slider automatically handles the percentage between minimum and maximum.
             fuel.value = GameManager.Instance.currentFuel;
         }
+
+        
     }
 }
