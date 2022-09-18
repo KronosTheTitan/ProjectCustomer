@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/mainMenu.unity
     guid: b9d8d3d7f5bb6f7488dac975767f3cb0
   - enabled: 1
     path: Assets/Scenes/SubmarineTest.unity
