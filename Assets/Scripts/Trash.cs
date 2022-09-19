@@ -32,7 +32,7 @@ public class Trash : MonoBehaviour
         //collectedTrash variable
         GameManager.Instance.ModifyCollectedTrash(yield);
         
-        Instantiate(message, GameManager.Instance.mainUI.transform, true);
+        Instantiate(message, GameManager.Instance.mainUI.transform, false);
         
 
         //destroy the gameObject, the trash spawner it belongs to will spawn a new one in due time
