@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Serialization;
@@ -11,7 +12,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public static GameManager Instance { get; private set; }
     
-    public Text trashCollected;
+    public TMP_Text trashCollected;
 
     private void Start() 
     { 
