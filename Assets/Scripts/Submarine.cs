@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -191,5 +192,11 @@ public class Submarine : MonoBehaviour
         //rotate the propeller based on the speed percentage.
         propeller.Rotate (Vector3.forward * Time.deltaTime * propellerSpeedFac * speedPercent, Space.Self);
         //propSpinMat.color = new Color (propSpinMat.color.r, propSpinMat.color.g, propSpinMat.color.b, speedPercent * .3f);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        _rigidbody.velocity = new Vector3();
+        velocity = new Vector3();
     }
 }

@@ -14,8 +14,8 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.046849385, g: 0.08489665, b: 0.5283019, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -655,7 +655,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 153368795}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: deathMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -698,7 +698,7 @@ GameObject:
   - component: {fileID: 153864990}
   - component: {fileID: 153864992}
   - component: {fileID: 153864993}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: trashScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -779,7 +779,7 @@ GameObject:
   - component: {fileID: 185603299}
   - component: {fileID: 185603298}
   - component: {fileID: 185603297}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: ButtonQuit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -910,7 +910,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 201703885}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -949,7 +949,7 @@ GameObject:
   - component: {fileID: 223327939}
   - component: {fileID: 223327941}
   - component: {fileID: 223327940}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1516,7 +1516,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 290318707}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: pauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1557,7 +1557,7 @@ GameObject:
   - component: {fileID: 326193047}
   - component: {fileID: 326193049}
   - component: {fileID: 326193048}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1665,7 +1665,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 394799903}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1787,7 +1787,7 @@ GameObject:
   - component: {fileID: 515259825}
   - component: {fileID: 515259827}
   - component: {fileID: 515259826}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1939,7 +1939,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0.2365432, g: 0.8254816, b: 0.9150943, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -2014,7 +2014,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 554125780}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2245,7 +2245,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 647848801}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2284,7 +2284,7 @@ GameObject:
   - component: {fileID: 651191680}
   - component: {fileID: 651191681}
   - component: {fileID: 651191682}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2360,7 +2360,7 @@ GameObject:
   - component: {fileID: 705830395}
   - component: {fileID: 705830397}
   - component: {fileID: 705830396}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2591,7 +2591,7 @@ GameObject:
   m_Component:
   - component: {fileID: 743915984}
   - component: {fileID: 743915983}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: TrashCapacity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3080,7 +3080,8 @@ MonoBehaviour:
   Player: {fileID: 60574428}
   Submarine: {fileID: 60574430}
   TrashPrefab: {fileID: 4365751627328465497, guid: 3de14b81e3171e243bea94a209d31afe, type: 3}
-  trashCapacityEnabled: 0
+  trashCapacityEnabled: 1
+  mainUI: {fileID: 1110201920}
   maxFuel: 100
   currentFuel: 100
   fuelConsumptionFac: 2
@@ -3207,7 +3208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 900114865}
   - component: {fileID: 900114866}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: FuelBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3895,7 +3896,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1110201921}
-  m_Layer: 5
+  - component: {fileID: 1110201924}
+  - component: {fileID: 1110201923}
+  - component: {fileID: 1110201922}
+  m_Layer: 0
   m_Name: InGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3925,6 +3929,67 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -5}
   m_SizeDelta: {x: 1904, y: 1054}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1110201922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110201920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1110201923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110201920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1110201924
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110201920}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &1118818014
 GameObject:
   m_ObjectHideFlags: 0
@@ -4106,7 +4171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -4155,7 +4219,7 @@ GameObject:
   - component: {fileID: 1189418617}
   - component: {fileID: 1189418619}
   - component: {fileID: 1189418618}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: trashScore (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4430,7 +4494,7 @@ GameObject:
   - component: {fileID: 1260348842}
   - component: {fileID: 1260348841}
   - component: {fileID: 1260348840}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: OpenSettings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4771,7 +4835,7 @@ GameObject:
   - component: {fileID: 1324122747}
   - component: {fileID: 1324122746}
   - component: {fileID: 1324122751}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: MainUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4821,10 +4885,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -4999,7 +5063,7 @@ GameObject:
   - component: {fileID: 1334903625}
   - component: {fileID: 1334903627}
   - component: {fileID: 1334903626}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5270,7 +5334,7 @@ GameObject:
   - component: {fileID: 1469827934}
   - component: {fileID: 1469827936}
   - component: {fileID: 1469827935}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5405,7 +5469,7 @@ GameObject:
   - component: {fileID: 1473423093}
   - component: {fileID: 1473423095}
   - component: {fileID: 1473423094}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5968,7 +6032,7 @@ GameObject:
   - component: {fileID: 1671478786}
   - component: {fileID: 1671478788}
   - component: {fileID: 1671478787}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6530,7 +6594,7 @@ GameObject:
   - component: {fileID: 1796969639}
   - component: {fileID: 1796969641}
   - component: {fileID: 1796969640}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6800,7 +6864,7 @@ GameObject:
   - component: {fileID: 1845523155}
   - component: {fileID: 1845523157}
   - component: {fileID: 1845523156}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: deathBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7204,7 +7268,7 @@ GameObject:
   - component: {fileID: 1942833754}
   - component: {fileID: 1942833753}
   - component: {fileID: 1942833752}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: ButtonReturn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7338,7 +7402,7 @@ GameObject:
   - component: {fileID: 1965916842}
   - component: {fileID: 1965916841}
   - component: {fileID: 1965916840}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: OpenSettings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7666,7 +7730,7 @@ GameObject:
   - component: {fileID: 2073294566}
   - component: {fileID: 2073294565}
   - component: {fileID: 2073294564}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: ButtonResume
   m_TagString: Untagged
   m_Icon: {fileID: 0}

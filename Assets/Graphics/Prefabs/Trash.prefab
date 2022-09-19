@@ -110,4 +110,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bff143b63b30d94c91fc51ef74799a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  message: {fileID: 2689834520598940769, guid: 07b503336ada7a24186207d1965579a5, type: 3}
   yield: 1

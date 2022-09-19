@@ -57,6 +57,8 @@ public class GameManager : MonoBehaviour
     public int TrashCapacity { get; private set; } = 3;
     [FormerlySerializedAs("TrashCapacityEnabled")] public bool trashCapacityEnabled;
 
+    public GameObject mainUI;
+
     /// <summary>
     /// Used to modify the amount of trash collected.
     /// Negative numbers will decrease it, positive numbers increase it
