@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -106,6 +107,11 @@ public class Submarine : MonoBehaviour
     /// </summary>
     [SerializeField] private Rigidbody _rigidbody;
 
+    /// <summary>
+    /// the menu that opens up when the player loses the game
+    /// </summary>
+    [SerializeField] private GameObject deathMenu;
+    
     public float speedPercent { get; private set; }
     
     void Update () {
@@ -115,6 +121,7 @@ public class Submarine : MonoBehaviour
             currentSpeed = 0;
             acceleration = 0;
             _rigidbody.velocity = new Vector3(0, 0, 0);
+            deathMenu.SetActive(true);
             return;
         }
         
@@ -185,5 +192,11 @@ public class Submarine : MonoBehaviour
         //rotate the propeller based on the speed percentage.
         propeller.Rotate (Vector3.forward * Time.deltaTime * propellerSpeedFac * speedPercent, Space.Self);
         //propSpinMat.color = new Color (propSpinMat.color.r, propSpinMat.color.g, propSpinMat.color.b, speedPercent * .3f);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        _rigidbody.velocity = new Vector3();
+        velocity = new Vector3();
     }
 }

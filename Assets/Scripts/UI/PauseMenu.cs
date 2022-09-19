@@ -57,7 +57,7 @@ namespace UI
 
         public void QuitToMainMenu()
         {
-            SceneManager.LoadScene(mainMenu.buildIndex);
+            SceneManager.LoadScene("MainMenu");
         }
     }
 }

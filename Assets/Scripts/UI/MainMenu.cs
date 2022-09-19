@@ -23,10 +23,15 @@ namespace UI
         /// the GameObject that functions as the parent for everything in the main menu.
         /// </summary>
         [SerializeField] private GameObject mainMenu;
+        
+        /// <summary>
+        /// the GameObject that functions as the parent for everything in the highscore menu.
+        /// </summary>
+        [SerializeField] private GameObject highscoreMenu;
 
         public void StartGame()
         {
-            SceneManager.LoadScene(level.buildIndex);
+            SceneManager.LoadScene("SubmarineTest");
         }
 
         public void OpenSettingsMenu()
@@ -34,10 +39,31 @@ namespace UI
             mainMenu.SetActive(false);
             settingsMenu.SetActive(true);
         }
+        
+        public void CloseSettingsMenu()
+        {
+            mainMenu.SetActive(true);
+            settingsMenu.SetActive(false);
+        }
     
         public void ExitGame()
         {
             Application.Quit();
+            Debug.Log("Quit button works");
         }
+        
+        public void OpenHighscoreMenu()
+        {
+            mainMenu.SetActive(false);
+            settingsMenu.SetActive(true);
+        }
+        
+        public void CloseHighscoreMenu()
+        {
+            mainMenu.SetActive(true);
+            settingsMenu.SetActive(false);
+        }
+        
+        
     }
 }
