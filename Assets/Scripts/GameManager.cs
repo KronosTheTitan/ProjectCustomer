@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
@@ -10,6 +11,8 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public static GameManager Instance { get; private set; }
     
+    public Text trashCollected;
+
     private void Start() 
     { 
         // If there already exists an instance destroy this one
@@ -22,7 +25,9 @@ public class GameManager : MonoBehaviour
         else
         {
             Instance = this; 
-        } 
+        }
+
+        
     }
 
     /// <summary>
@@ -51,6 +56,8 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public int TrashCapacity { get; private set; } = 3;
     [FormerlySerializedAs("TrashCapacityEnabled")] public bool trashCapacityEnabled;
+
+    public GameObject mainUI;
 
     /// <summary>
     /// Used to modify the amount of trash collected.
@@ -103,5 +110,7 @@ public class GameManager : MonoBehaviour
             _lastFuelTick = Time.time;
             FuelUsage();
         }
+        
+        trashCollected.text = CollectedTrash.ToString();
     }
 }

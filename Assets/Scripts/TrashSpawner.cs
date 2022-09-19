@@ -68,7 +68,7 @@ public class TrashSpawner : MonoBehaviour
     /// draws the radius in the editor when the object is selected.
     /// makes it easier for designers to estimate the size.
     /// </summary>
-    void OnDrawGizmosSelected ()
+    void OnDrawGizmos ()
     {
         //set the color of the gizmo to be drawn to yellow.
         Gizmos.color = Color.yellow;

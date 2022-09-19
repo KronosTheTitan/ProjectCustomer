@@ -3,6 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class Trash : MonoBehaviour
 {
+    [SerializeField] private GameObject message;
     /// <summary>
     /// the amount of trash collected when the parent object is
     /// "picked up"
@@ -31,6 +32,9 @@ public class Trash : MonoBehaviour
         //collectedTrash variable
         GameManager.Instance.ModifyCollectedTrash(yield);
         
+        Instantiate(message, GameManager.Instance.mainUI.transform, true);
+        
+
         //destroy the gameObject, the trash spawner it belongs to will spawn a new one in due time
         Destroy(gameObject);
     }
