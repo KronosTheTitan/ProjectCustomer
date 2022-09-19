@@ -24,10 +24,11 @@ namespace UI
         /// Warning, scene has to be added to the build list.
         /// </summary>
         /// <returns></returns>
+        
         public void PlayAgain()
         {
             //load the scene asigned to the level1 variable
-            SceneManager.LoadScene(level1.buildIndex);
+            SceneManager.LoadScene("level1");
         }
         
         /// <summary>
@@ -38,7 +39,7 @@ namespace UI
         public void ReturnToMainMenu()
         {
             //load the scene asigned to the mainMenu variable
-            SceneManager.LoadScene(mainMenu.buildIndex);
+            SceneManager.LoadScene("mainMenu");
         }
     }
 }
