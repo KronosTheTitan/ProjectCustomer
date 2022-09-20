@@ -49,3 +49,6 @@ crashlytics-build.properties
 
 Assets/WIP/
 Assets/Samples/
+
+# these files are used by the Unity editor to keep track of changes to the layout
+*.dwlt
