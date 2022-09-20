@@ -58,6 +58,11 @@ namespace UI
             ingameMenu.SetActive(false);
         }
 
+        public void Restart()
+        {
+            SceneManager.LoadScene("SubmarineTest");
+        }
+
         public void QuitToDesktop()
         {
             Application.Quit();

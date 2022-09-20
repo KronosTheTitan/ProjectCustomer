@@ -71,6 +71,12 @@ public class GameManager : MonoBehaviour
         CollectedTrash += amount;
     }
 
+    public void AddFuel(int amount)
+    {
+        currentFuel += amount;
+        currentFuel = Mathf.Clamp(currentFuel, 0, maxFuel);
+    }
+
     /// <summary>
     /// the maximum fuel capacity
     /// </summary>

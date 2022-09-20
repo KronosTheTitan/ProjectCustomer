@@ -9,6 +9,7 @@ public class Trash : MonoBehaviour
     /// "picked up"
     /// </summary>
     [SerializeField] private int yield = 1;
+    [SerializeField] private int fuel = 0;
     
     /// <summary>
     /// this method is called when something collides with this gameObjects
@@ -31,6 +32,7 @@ public class Trash : MonoBehaviour
         //call the method to add the amount trash set in the yield variable to the GameManagers
         //collectedTrash variable
         GameManager.Instance.ModifyCollectedTrash(yield);
+        GameManager.Instance.AddFuel(fuel);
         
         Instantiate(message, GameManager.Instance.mainUI.transform, true);
         

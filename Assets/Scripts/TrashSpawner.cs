@@ -29,6 +29,8 @@ public class TrashSpawner : MonoBehaviour
     /// </summary>
     private bool spawnTimerRunning = false;
 
+    private GameObject trashPrefab;
+
     private void Update()
     {
         if (spawnedTrash == null && !spawnTimerRunning)
@@ -44,7 +46,7 @@ public class TrashSpawner : MonoBehaviour
         {
             //create a new trash object and set spawnedTrash to that new object.
             //spawned object is a prefab fetched from the gameManager.
-            spawnedTrash = Instantiate(GameManager.Instance.TrashPrefab);
+            spawnedTrash = Instantiate(trashPrefab);
 
             //pick a random position between -10 and 10 on each axis.
             //used to create a random direction.
