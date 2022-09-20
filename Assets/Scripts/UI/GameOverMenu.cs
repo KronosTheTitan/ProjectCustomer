@@ -28,7 +28,7 @@ namespace UI
         public void PlayAgain()
         {
             //load the scene asigned to the level1 variable
-            SceneManager.LoadScene("level1");
+            SceneManager.LoadScene("SubmarineTest");
         }
         
         /// <summary>

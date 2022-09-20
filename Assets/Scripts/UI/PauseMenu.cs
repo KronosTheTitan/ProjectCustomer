@@ -50,6 +50,11 @@ namespace UI
             pauseMenu.SetActive(true);
         }
 
+        public void Restart()
+        {
+            SceneManager.LoadScene("SubmarineTest");
+        }
+
         public void QuitToDesktop()
         {
             Application.Quit();
