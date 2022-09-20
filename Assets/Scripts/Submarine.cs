@@ -111,6 +111,12 @@ public class Submarine : MonoBehaviour
     /// the menu that opens up when the player loses the game
     /// </summary>
     [SerializeField] private GameObject deathMenu;
+
+    /// <summary>
+    /// the variable keeping track of the parent object
+    /// used for the pause menu.
+    /// </summary>
+    [SerializeField] private GameObject ingameMenu;
     
     public float speedPercent { get; private set; }
     
@@ -122,6 +128,7 @@ public class Submarine : MonoBehaviour
             acceleration = 0;
             _rigidbody.velocity = new Vector3(0, 0, 0);
             deathMenu.SetActive(true);
+            ingameMenu.SetActive(false);
             return;
         }
         

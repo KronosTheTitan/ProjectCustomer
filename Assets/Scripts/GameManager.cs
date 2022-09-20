@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     
     public TMP_Text trashCollected;
+    public TMP_Text trashCollectedFinal;
 
     private void Start() 
     { 
@@ -113,5 +114,6 @@ public class GameManager : MonoBehaviour
         }
         
         trashCollected.text = CollectedTrash.ToString();
+        trashCollectedFinal.text = CollectedTrash.ToString();
     }
 }
