@@ -522,7 +522,7 @@ MonoBehaviour:
   rudderAngle: 30
   propSpinMat: {fileID: 0}
   _rigidbody: {fileID: 60574432}
-  deathMenu: {fileID: 0}
+  deathMenu: {fileID: 549850380}
 --- !u!136 &60574431
 CapsuleCollider:
   m_ObjectHideFlags: 0
