@@ -21,7 +21,13 @@ namespace UI
         /// used for the pause menu.
         /// </summary>
         [SerializeField] private GameObject pauseMenu;
-    
+
+        /// <summary>
+        /// the vatiale keeping track of the parent object
+        /// used for the ingame user interface
+        /// </summary>
+        [SerializeField] public GameObject ingameMenu;
+        
         /// <summary>
         /// Update loop to make the ESC key do its job.
         /// </summary>
@@ -42,12 +48,14 @@ namespace UI
         {
             Time.timeScale = 1;
             pauseMenu.SetActive(false);
+            ingameMenu.SetActive(true);
         }
 
         public void PauseGame()
         {
             Time.timeScale = 0;
             pauseMenu.SetActive(true);
+            ingameMenu.SetActive(false);
         }
 
         public void QuitToDesktop()
