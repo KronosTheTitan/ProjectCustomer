@@ -45,7 +45,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4471966946077626638
 MonoBehaviour:
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   message: {fileID: 1336933649450657710, guid: 457a42cf1448ae742bcfa8ae3242575d, type: 3}
-  yield: 1
+  yield: 2
   fuel: 0
 --- !u!1 &4023301756344808539
 GameObject:
