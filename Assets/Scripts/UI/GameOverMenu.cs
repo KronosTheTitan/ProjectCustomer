@@ -18,6 +18,8 @@ namespace UI
         /// The variable used to keep track of the first level.
         /// </summary>
         [SerializeField] private Scene level1;
+
+        [SerializeField] private GameObject restartScreen;
         
         /// <summary>
         /// Loads the first level.
@@ -27,8 +29,7 @@ namespace UI
         
         public void PlayAgain()
         {
-            //load the scene asigned to the level1 variable
-            SceneManager.LoadScene("SubmarineTest");
+            restartScreen.SetActive(true);
         }
         
         /// <summary>

@@ -34,8 +34,8 @@ public class Trash : MonoBehaviour
         GameManager.Instance.ModifyCollectedTrash(yield);
         GameManager.Instance.AddFuel(fuel);
         
-        Instantiate(message, GameManager.Instance.mainUI.transform, true);
-        
+        GameObject messageObject = Instantiate(message, GameManager.Instance.CaptainsMessageTarget, true);
+        messageObject.transform.position = new Vector3(Screen.width/2,Screen.height/2,1);
 
         //destroy the gameObject, the trash spawner it belongs to will spawn a new one in due time
         Destroy(gameObject);
