@@ -25,12 +25,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CausticTex1:
-        m_Texture: {fileID: 2800000, guid: 529239097d02f9f42b0ddd436c6fcbb0, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: 82ea9c0b9ab15bd4681cf1d96b94b811, type: 3}
+        m_Scale: {x: 2, y: 2}
         m_Offset: {x: 0, y: 0}
     - _CausticTex2:
-        m_Texture: {fileID: 2800000, guid: b1d7fee26e54cc3498f6267f072a45b9, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: 58344e97d6199e744a0fa6476610b80a, type: 3}
+        m_Scale: {x: 2, y: 2}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
         m_Texture: {fileID: 0}
@@ -49,7 +49,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FalloffTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 23740055e2b119e40a939138ab8070f8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -86,6 +86,7 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
+    - _tiling: 1
     - _timeScale: 0.1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}

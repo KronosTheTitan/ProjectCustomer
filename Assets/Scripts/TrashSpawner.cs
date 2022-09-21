@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -22,14 +23,14 @@ public class TrashSpawner : MonoBehaviour
     /// <summary>
     /// the trash object belonging to this spawner.
     /// </summary>
-    private GameObject spawnedTrash;
+    [SerializeField] private GameObject spawnedTrash;
     
     /// <summary>
     /// used to check if the respawn timer is currently running.
     /// </summary>
     private bool spawnTimerRunning = false;
 
-    private GameObject trashPrefab;
+    [SerializeField] private GameObject trashPrefab;
 
     private void Update()
     {

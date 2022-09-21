@@ -6,7 +6,7 @@ public class RestartMenu : MonoBehaviour
 {
     [SerializeField] private string[] facts;
 
-    private TMP_Text factText;
+    [SerializeField] private TMP_Text factText;
 
     private void Awake()
     {

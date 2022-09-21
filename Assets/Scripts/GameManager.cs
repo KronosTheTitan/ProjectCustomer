@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public TMP_Text trashCollected;
     public TMP_Text trashCollectedFinal;
 
+    public Transform CaptainsMessageTarget;
+
     private void Start() 
     { 
         // If there already exists an instance destroy this one
