@@ -5328,7 +5328,7 @@ MonoBehaviour:
   trashCapacityEnabled: 0
   mainUI: {fileID: 1324122745}
   maxFuel: 300
-  currentFuel: 300
+  currentFuel: 1
   fuelConsumptionFac: 2
   fuelTickInterval: 1
 --- !u!4 &877361934
@@ -13140,6 +13140,7 @@ MonoBehaviour:
   level1:
     m_Handle: 0
   restartScreen: {fileID: 2002660709}
+  deathMenu: {fileID: 549850380}
 --- !u!1 &1334903624
 GameObject:
   m_ObjectHideFlags: 0
@@ -14258,7 +14259,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1490206080
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18096,7 +18097,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cd530cec216d2b47b869e4cb2426243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  facts: []
+  facts:
+  - Hoi
   factText: {fileID: 2060908928}
 --- !u!1 &2030201253
 GameObject:
@@ -18723,7 +18725,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1324122752}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UI.GameOverMenu, Assembly-CSharp
         m_MethodName: PlayAgain
         m_Mode: 1
