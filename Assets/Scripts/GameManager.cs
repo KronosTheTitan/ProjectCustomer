@@ -123,5 +123,10 @@ public class GameManager : MonoBehaviour
         
         trashCollected.text = CollectedTrash.ToString();
         trashCollectedFinal.text = CollectedTrash.ToString();
+
+        if (CollectedTrash > PlayerPrefs.GetInt("highscore", 0))
+        {
+            PlayerPrefs.SetInt("highscore", CollectedTrash);
+        }
     }
 }
