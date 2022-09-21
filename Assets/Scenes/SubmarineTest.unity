@@ -14,8 +14,8 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.11107157, g: 0.2905654, b: 0.6037736, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.066972226, g: 0.1906203, b: 0.4056604, a: 1}
   m_FogMode: 2
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -2266,7 +2266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &311948936
 Transform:
   m_ObjectHideFlags: 0
@@ -4019,7 +4019,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.36124957, g: 0.5634821, b: 0.6226415, a: 1}
+  m_Color: {r: 0.24256852, g: 0.4967484, b: 0.745283, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -6441,7 +6441,7 @@ PrefabInstance:
     - target: {fileID: 6033792322585456933, guid: eda54ef80c4c4d24f8550fadc67547b6, type: 3}
       propertyPath: trashPrefab
       value: 
-      objectReference: {fileID: 919132149155446097, guid: 17f9f30b66f25494a8cae9a02eda86c2, type: 3}
+      objectReference: {fileID: 3661136155387358297, guid: a0b9b104bb26a1949a2d02115801c7bd, type: 3}
     - target: {fileID: 6033792322585456934, guid: eda54ef80c4c4d24f8550fadc67547b6, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -24090,7 +24090,7 @@ PrefabInstance:
     - target: {fileID: 6033792322585456933, guid: eda54ef80c4c4d24f8550fadc67547b6, type: 3}
       propertyPath: trashPrefab
       value: 
-      objectReference: {fileID: 919132149155446097, guid: 87d08479be13f814082956534bc531ac, type: 3}
+      objectReference: {fileID: 1536918766212814595, guid: ecc78053874a631469a72fce3f823987, type: 3}
     - target: {fileID: 6033792322585456934, guid: eda54ef80c4c4d24f8550fadc67547b6, type: 3}
       propertyPath: m_RootOrder
       value: 0
