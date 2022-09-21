@@ -119,11 +119,14 @@ public class Submarine : MonoBehaviour
     [SerializeField] private GameObject ingameMenu;
     
     public float speedPercent { get; private set; }
+
+    private bool dead = false;
     
     void Update () {
 
-        if (GameManager.Instance.currentFuel <= 0)
+        if (GameManager.Instance.currentFuel <= 0 && !dead)
         {
+            dead = true; 
             currentSpeed = 0;
             acceleration = 0;
             _rigidbody.velocity = new Vector3(0, 0, 0);

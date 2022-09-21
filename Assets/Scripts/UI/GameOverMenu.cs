@@ -20,6 +20,8 @@ namespace UI
         [SerializeField] private Scene level1;
 
         [SerializeField] private GameObject restartScreen;
+
+        [SerializeField] private GameObject deathMenu;
         
         /// <summary>
         /// Loads the first level.
@@ -29,6 +31,8 @@ namespace UI
         
         public void PlayAgain()
         {
+            deathMenu.SetActive(false);
+            
             restartScreen.SetActive(true);
         }
         
