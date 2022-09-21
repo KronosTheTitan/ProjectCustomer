@@ -1,3 +1,5 @@
+using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -28,6 +30,15 @@ namespace UI
         /// the GameObject that functions as the parent for everything in the highscore menu.
         /// </summary>
         [SerializeField] private GameObject highscoreMenu;
+
+        [SerializeField] private GameObject tutorial;
+
+        public TMP_Text highScore;
+
+        private void Start()
+        {
+            highScore.text = PlayerPrefs.GetInt("highscore", 0).ToString();
+        }
 
         public void StartGame()
         {
@@ -63,7 +74,12 @@ namespace UI
             mainMenu.SetActive(true);
             settingsMenu.SetActive(false);
         }
-        
+
+        public void OpenTutorial()
+        {
+            mainMenu.SetActive(false);
+            tutorial.SetActive(true);
+        }
         
     }
 }

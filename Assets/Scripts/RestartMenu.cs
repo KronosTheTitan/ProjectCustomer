@@ -10,7 +10,7 @@ public class RestartMenu : MonoBehaviour
 
     private void Awake()
     {
-        factText.text = facts[Random.Range(0,facts.Length-1)];
+        factText.text = facts[Random.Range(0,facts.Length)];
     }
 
     public void Continue()
