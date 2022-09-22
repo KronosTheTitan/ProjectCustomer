@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 1374780332886190004}
   - component: {fileID: 2696003495232313511}
   m_Layer: 0
-  m_Name: TrashBag
+  m_Name: TrashB+MSG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -142,6 +142,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bff143b63b30d94c91fc51ef74799a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: {fileID: 1336933649450657710, guid: 457a42cf1448ae742bcfa8ae3242575d, type: 3}
+  message: {fileID: 2689834520598940769, guid: 20a7d1b172aae44468de0b5fa298daa4, type: 3}
   yield: 1
   fuel: 0

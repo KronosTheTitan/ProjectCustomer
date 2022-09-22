@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2689834520598940772}
   - component: {fileID: 2689834520598940771}
   m_Layer: 5
-  m_Name: ExamplePrefab
+  m_Name: Msg_TurtleSave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,7 +67,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Congrats you picked up some trash
+  m_text: Did you know 1000 turtles die each year due to our waste? That's almost
+    3 a day!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -148,6 +149,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5787153c3b83364899b55baa67dd840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeDelayTime: 5
-  fadeTime: 5
+  fadeDelayTime: 9
+  fadeTime: 2
   text: {fileID: 2689834520598940772}

@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: -6274091228195933867}
   - component: {fileID: -1271632479373274222}
   m_Layer: 0
-  m_Name: Juice1
+  m_Name: Juice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
