@@ -33,6 +33,8 @@ namespace UI
 
         [SerializeField] private GameObject tutorial;
 
+        
+
         public TMP_Text highScore;
 
         private void Start()
@@ -80,6 +82,14 @@ namespace UI
             mainMenu.SetActive(false);
             tutorial.SetActive(true);
         }
+
+        public void CloseTutorial()
+        {
+            mainMenu.SetActive(true);
+            tutorial.SetActive(false);
+        }
+
+
         
     }
 }
