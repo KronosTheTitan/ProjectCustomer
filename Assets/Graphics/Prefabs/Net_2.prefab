@@ -2087,7 +2087,7 @@ GameObject:
   - component: {fileID: 7196276153242345499}
   - component: {fileID: 3095639656915413138}
   m_Layer: 0
-  m_Name: Net_prefab
+  m_Name: Net_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2185,7 +2185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bff143b63b30d94c91fc51ef74799a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: {fileID: 2689834520598940769, guid: 4e7628d69a73ca846938055f7cddbf8e, type: 3}
+  message: {fileID: 2689834520598940769, guid: f2fa0aaafad1698409b51329b0b42f50, type: 3}
   yield: 10
   fuel: 0
 --- !u!1 &4620447531502168470

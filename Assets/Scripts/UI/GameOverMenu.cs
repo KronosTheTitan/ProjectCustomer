@@ -1,3 +1,5 @@
+using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -22,13 +24,18 @@ namespace UI
         [SerializeField] private GameObject restartScreen;
 
         [SerializeField] private GameObject deathMenu;
-        
+        public TMP_Text High_Score;
+
         /// <summary>
         /// Loads the first level.
         /// Warning, scene has to be added to the build list.
         /// </summary>
         /// <returns></returns>
-        
+        private void Start()
+        {
+            High_Score.text = PlayerPrefs.GetInt("highscore", 0).ToString();
+        }
+
         public void PlayAgain()
         {
             deathMenu.SetActive(false);
