@@ -28,6 +28,10 @@ namespace UI
         /// </summary>
         [SerializeField] public GameObject ingameMenu;
         
+        [SerializeField] private GameObject confirmQuitMenu;
+
+        [SerializeField] private GameObject tutorialScreen;
+        
         /// <summary>
         /// Update loop to make the ESC key do its job.
         /// </summary>
@@ -71,6 +75,28 @@ namespace UI
         public void QuitToMainMenu()
         {
             SceneManager.LoadScene("MainMenu");
+        }
+        
+        public void openConfirm()
+        {
+            confirmQuitMenu.SetActive(true);
+        }
+
+        public void closeConfirm()
+        {
+            confirmQuitMenu.SetActive(false);
+        }
+
+        public void openTutorial()
+        {
+            tutorialScreen.SetActive(true);
+            pauseMenu.SetActive(false);
+        }
+
+        public void closetutorial()
+        {
+            tutorialScreen.SetActive(false);
+            pauseMenu.SetActive(true);
         }
     }
 }

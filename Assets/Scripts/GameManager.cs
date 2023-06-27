@@ -95,6 +95,8 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public float fuelConsumptionFac = 2;
 
+    public bool isLowFuel = false;
+
     /// <summary>
     /// This function is used to control the fuel
     /// consumption rate of the player.
@@ -115,6 +117,16 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        //Debug.Log(currentFuel);
+        if (currentFuel > 30)
+        {
+            isLowFuel = true;
+        }
+        else
+        {
+            isLowFuel = false;
+        }
+        
         if (Time.time > _lastFuelTick + fuelTickInterval)
         {
             _lastFuelTick = Time.time;
